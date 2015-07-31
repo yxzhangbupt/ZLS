@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>北京自来水集团工艺平台</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ocanvas-2.7.4.min.js"></script>
+    <script src="js/GN_QS.js"></script>
+
+
+    <style>
+        body {
+            background: #afd9ee;
+        }
+        #myPage {
+            font-family: '微软雅黑','Source Sans Pro';
+            font-size: 15px;
+            /*background:url("image/bg03.jpg") no-repeat;*/
+            /*background-size: 1600px 800px;*/
+            width: 1600px;
+            height: 800px;
+            margin:0px auto;
+        }
+
+        #pageHead {
+            height: 50px;
+        }
+        #pageHead .navbar{
+            opacity: 0.85;
+            z-index: 10;
+        }
+        .sidebar a{
+            color: #000000;
+            margin-top: 2px;
+        }
+        .sidebar a:hover{
+            color:blue;
+        }
+        .navbar-brand {
+            padding-top: 10px;
+        }
+        .sidebar a:hover{
+            background: #f5f5dc;
+        }
+        a {
+            margin-left: 10px;
+        }
+
+        #myContent{
+            margin: 0px 0px 0px 0px;
+            position: relative;
+            height: 750px;
+            width: 1600px;
+        }
+
+        #pageFooter{
+            background: #e5e5e5;
+        }
+        #pageFooter p{
+            text-align: center;
+        }
+
+
+        * {
+            font-family: '微软雅黑', 'Arial';
+        }
+
+        #btn_group {
+            position: absolute;
+            top: 44px;
+            left: 1371px;
+            z-index: 9;
+        }
+
+        #canvas_QS {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+        }
+        #readout_SimTime{
+            position: absolute;
+            left: 678px;
+            top: 30px;
+            width: 200px;
+            height: 200px;
+            font-size: 15px;
+            color: #eef5fd;
+            z-index: 10;
+        }
+        #readout_SC1 {
+            position: absolute;
+            left: 483px;
+            top: 220px;
+            width: 200px;
+            height: 200px;
+            font-size: 15px;
+            color: #eef5fd;
+            z-index: 10;
+        }
+
+        #readout_SC2 {
+            position: absolute;
+            left: 483px;
+            top: 680px;
+            width: 200px;
+            height: 200px;
+            font-size: 15px;
+            color: #eef5fd;
+            z-index: 10;
+        }
+        #readout_Y1 {
+            position: absolute;
+            left: 983px;
+            top: 220px;
+            width: 200px;
+            height: 200px;
+            font-size: 15px;
+            color: #eef5fd;
+            z-index: 10;
+        }
+        #readout_Y2 {
+            position: absolute;
+            left: 983px;
+            top: 680px;
+            width: 200px;
+            height: 200px;
+            font-size: 15px;
+            color: #eef5fd;
+            z-index: 10;
+        }
+        #test1 {
+            position: absolute;
+            left: 678px;
+            top: 150px;
+            width: 200px;
+            height: 200px;
+            font-size: 15px;
+            color: #eef5fd;
+            z-index: 10;
+        }
+        #water_input {
+            position: absolute;
+            left: 287px;
+            top: 53px;
+            height: 200px;
+            width: 30px;
+            font-size: 20px;
+            color: #d9e4f5;
+            z-index: 10;
+        }
+
+        .flow {
+            position: absolute;
+            height: 50px;
+            width: 100px;
+            font-size: 18px;
+            color: #d9e4f5;
+            z-index: 10;
+        }
+
+        #flow1 {
+            top: 65px;
+            left: 356px;
+        }
+
+        #flow2 {
+            top: 275px;
+            left: 356px;
+        }
+
+        .upLevel {
+            position: absolute;
+            height: 50px;
+            width: 120px;
+            font-size: 20px;
+            color: #51f5eb;
+            z-index: 10;
+        }
+
+        #upLevel1 {
+            top: 340px;
+            left: 752px;
+        }
+
+        #upLevel2 {
+            top: 420px;
+            left: 752px;
+        }
+
+        #upLevel3 {
+            top: 500px;
+            left: 752px;
+        }
+
+        #upLevel4 {
+            top: 580px;
+            left: 752px;
+        }
+    </style>
+</head>
+<body>
+<div id="myPage">
+    <div id="pageHead" >
+        <nav id="myNav" class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <span>&nbsp;&nbsp;</span>
+                        <img src="image/logo.png" height="30" width="30" style="display: inline">
+                        <span style="font-size: 22px;font-family: '微软雅黑">&nbsp;北京市自来水集团</span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                   <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-home"></i>&nbsp;动态演示<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li ><a href="#" onclick="window.location.href='main.html'">厂平展示</a></li>
+                                <li><a href="ZP_new.html" >新系列工艺线</a></li>
+                                <li><a href="ZP_old.html">旧系列工艺线</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i>&nbsp;水量调控<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="GN_getWater.html">水量增减</a></li>
+                                <li><a href="shujufenxi.html">数据分析</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wrench"></i>&nbsp;设施检修<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="fix.html">维修单元显示</a></li>
+                                <li><a href="fangan.html">方案生成</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-medkit"></i>&nbsp;运行评估<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="jijiachi.html">机加池分析</a></li>
+                                <li><a href="#">膜池分析</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-sm" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="myContent" style="overflow: hidden">
+        <div id="btn_group" class="btn-group-vertical btn-group-lg" role="group">
+            <button id="btn_start" class="btn btn-primary" value="0">开始演示</button>
+            <button id="btn_fast" class="btn btn-primary">加速</button>
+            <button id="btn_slow" class="btn btn-primary">减速</button>
+            <button id="btn_zero" class="btn btn-primary">默认速度</button>
+            <button id="btn_reset" class="btn btn-primary">重置</button>
+            <button  id="btn_next" class="btn btn-primary">下一个</button>
+        </div>
+        <canvas id="canvas_QS" width="1600" height="753"></canvas>
+        <div id="SC01">
+        <!--<div id="test1">-->
+            <!--<p>测试cookie</p>-->
+        <!--</div>-->
+        </div>
+        <div id="readout_SimTime">
+            <p id="SimTime">水量: 0.0</p>
+        </div>
+        <div id="readout_SC1">
+            <p id="readout_SC1_Vnow">水量: 0.0</p>
+            <p id="readout_SC1_Onload">负载: 0.0</p>
+        </div>
+        <div id="readout_SC2">
+        <p id="readout_SC2_Vnow">水量: 0.0</p>
+        <p id="readout_SC2_Onload">负载: 0.0</p>
+        </div>
+        <div id="readout_Y1">
+            <p id="readout_Y1_Vnow">水量: 0.0</p>
+            <p id="readout_Y1_Onload">负载: 0.0</p>
+        </div>
+        <div id="readout_Y2">
+            <p id="readout_Y2_Vnow">水量: 0.0</p>
+            <p id="readout_Y2_Onload">负载: 0.0</p>
+        </div>
+        <div id="water_input">进厂水</div>
+        <div id="flow1" class="flow">流量计</div>
+        <div id="flow2" class="flow">流量计</div>
+        <div id="upLevel1" class="upLevel">提升泵1</div>
+        <div id="upLevel2" class="upLevel">提升泵2</div>
+        <div id="upLevel3" class="upLevel">提升泵3</div>
+        <div id="upLevel4" class="upLevel">提升泵4</div>
+    </div>
+    <footer id="pageFooter">
+        <p> 2008版权所有　北京市自来水集团有限责任公司 2638841</p>
+        <p>地址：中国 北京市西城区宣武门西大街甲121号　邮编：100031　中文域名：北京京水集团</p>
+        <p>总机电话：010-66410088　客服中心：96116 稽查电话:010-64036465  朝阳营销分公司服务信箱Cy638@sina.com</p>
+    </footer>
+    <script>
+        function open_mainView(){
+            window.open("main1.html",'_self');
+        }
+    </script>
+</div>
+</body>
+</html>

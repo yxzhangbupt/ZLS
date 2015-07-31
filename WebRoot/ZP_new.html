@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>北京自来水集团工艺平台</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ocanvas-2.7.4.min.js"></script>
+    <script src="js/my_oCanvas.js"></script>
+    <script src="js/ZP_new.js"></script>
+    <style>
+       body {
+            background: #afd9ee;
+        }
+        #myPage {
+            font-family: '微软雅黑','Source Sans Pro';
+            font-size: 15px;
+            width: 1600px;
+            height: 800px;
+            margin:0px auto;
+        }
+        #myNav{
+            background: #f1f3f5;
+        }
+        #pageHead {
+            height: 50px;
+            font-size: 19px;
+        }
+        #pageHead .navbar{
+            /*opacity: 0.85;*/
+            z-index: 10;
+        }
+        .sidebar a{
+            color: #000000;
+            margin-top: 2px;
+        }
+        .sidebar a:hover{
+            color:blue;
+        }
+        .navbar-brand {
+            padding-top: 10px;
+        }
+        .sidebar a:hover{
+            background: #f5f5dc;
+        }
+        a {
+            margin-left: 10px;
+        }
+        #myContent{
+            margin: 0px 0px 0px 0px;
+            position: relative;
+            height: 779px;
+            width: 1600px;
+        }
+        #pageFooter{
+            background: #e5e5e5;
+        }
+        #pageFooter p{
+            font-family: '微软雅黑','Arial';
+            text-align: center;
+        }
+        #btn_start{
+            z-index: 11;
+            position: fixed;
+            left: 200px;
+            top: 70px;
+        }
+       #btn_upS{
+           z-index: 11;
+           position: fixed;
+           left: 250px;
+           top: 70px;
+       }
+       #btn_downS{
+           z-index: 11;
+           position: fixed;
+           left: 300px;
+           top: 70px;
+       }
+    </style>
+    <script>
+        oCanvas.domReady(function () {
+            var canvas=oCanvas.create({
+                canvas: "#canvas_main",
+                background: "#ccc",
+                fps: 15
+            });
+            var bg = canvas.display.image({
+                x: 0,
+                y: 0,
+                image: "image/main.jpg"
+            });
+            canvas.addChild(bg);
+        });
+    </script>
+</head>
+<body>
+<div id="myPage">
+    <div id="pageHead" >
+        <nav id="myNav" class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <span>&nbsp;&nbsp;</span>
+                        <img src="image/logo.png" height="30" width="30" style="display: inline">
+                        <span style="font-size: 25px;font-family: '微软雅黑'">&nbsp;北京市自来水集团</span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-home"></i>&nbsp;动态演示<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li ><a href="#" onclick="window.location.href='main.html'">厂平展示</a></li>
+                                <li><a href="ZP_new.html" >新系列工艺线</a></li>
+                                <li><a href="ZP_old.html">旧系列工艺线</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i>&nbsp;水量调控<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="GN_getWater.html">水量增减</a></li>
+                                <li><a href="shujufenxi.html">数据分析</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wrench"></i>&nbsp;设施检修<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="fix.html">维修单元显示</a></li>
+                                <li><a href="fangan.html">方案生成</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-medkit"></i>&nbsp;运行评估<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="jijiachi.html">机加池分析</a></li>
+                                <li><a href="#">膜池分析</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-sm" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="myContent" style="overflow: auto">
+        <button id="btn_start" class="btn btn-info">开始</button>
+        <button id="btn_upS" class="btn btn-info">加速</button>
+        <button id="btn_downS" class="btn btn-info">减速</button>
+        <div id="mainView" style="position: absolute;z-index: 1" >
+            <canvas id="canvas_ZP_new" width="4400" height="757"></canvas>
+        </div>
+    </div>
+    <footer id="pageFooter">
+        <p> 2008版权所有　北京市自来水集团有限责任公司 2638841</p>
+        <p>地址：中国 北京市西城区宣武门西大街甲121号　邮编：100031　中文域名：北京京水集团</p>
+        <p>总机电话：010-66410088　客服中心：96116 稽查电话:010-64036465  朝阳营销分公司服务信箱Cy638@sina.com</p>
+    </footer>
+</div>
+</body>
+</html>

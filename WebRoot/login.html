@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>北京自来水集团工艺平台登陆</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script src="js/common.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        body{
+            font-family: '微软雅黑','Arial';
+            /* background: #31b0d5;*/
+            background: #337ab7;
+        }
+        #page_login{
+            width: 1600px;
+            height: 775px;
+            margin: 0 auto auto auto;
+            background: url("image/login/denglu.jpg");
+            background-size: 1600px 800px;
+        }
+        #username{
+            position: relative;
+            background: url("image/login/unameOff.png");
+            left: 857px;
+            top: 350px;
+            width: 245px;
+            height: 38px;
+            border: none;
+            padding-left: 50px;
+        }
+        #username:focus
+        {
+            background: url("image/login/unameOn.png");
+            border: transparent;
+        }
+        #password{
+            display: block;
+            background: url("image/login/pwdOff.png");
+            position: relative;
+            left: 857px;
+            top: 380px;
+            width: 245px;
+            height: 38px;
+            border: none;
+            padding-left: 50px;
+
+        }
+        #password:focus
+        {
+            background: url("image/login/pwdOn.png");
+        }
+        #btn_login{
+            background: url("image/login/loginOff.png");
+            position: relative;
+            left: 857px;
+            top: 410px;
+            width: 245px;
+            height: 38px;
+        }
+        #btn_login:focus
+        {
+            background: url("image/login/loginOn.png");
+        }
+    </style>
+    <script>
+        function login(){
+            $.ajax({
+                url:"login.jsp",
+                method:"POST",
+                data:{ name: $("#username").val(), pwd: $("#password").val()},
+                success:function(da){
+                	var data=eval('('+da+')');
+                    if(data.status=="Success"){
+                        window.location.href="CP_show.html";
+                    }
+                    else{
+                        alert("登录名或者密码不正确，请重新输入！")
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<div id="page_login">
+    <input type="text" id="username" size="40" placeholder="">
+    <input type="password" id="password" size="40" placeholder="">
+    <input type="button" style="border: 0px" id="btn_login" onclick="login()">
+</div>
+</body>
+</html>
