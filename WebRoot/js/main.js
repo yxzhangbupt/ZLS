@@ -77,7 +77,7 @@ oCanvas.domReady(function () {
             height:'200px',opacity:'1'},'fast');
         this.unbind("flash");
 
-        //GD01.trigger("start");
+        GD07.trigger("start");
     });
     //???????????
     var img21=img2.clone({
@@ -106,7 +106,7 @@ oCanvas.domReady(function () {
             height:'200px',opacity:'1'},'fast');
         this.unbind("flash");
 
-        //GD01.trigger("start");
+        GD08.trigger("start");
     });
     var img22=img2.clone({
         x:1133,
@@ -134,7 +134,7 @@ oCanvas.domReady(function () {
             height:'200px',opacity:'1'},'fast');
         this.unbind("flash");
 
-        //GD01.trigger("start");
+        GD09.trigger("start");
     });
     //V?????????
     var img3=canvas.display.image({
@@ -152,6 +152,20 @@ oCanvas.domReady(function () {
         canvas.mouse.cursor("default");
         $("#name_VL").css("display","none");
    
+    }).bind("flash",function(){
+        $("#name_VL").animate({
+            height:'200px',opacity:'1'},'fast');
+        $("#name_VL").animate({
+            height:'200px',opacity:'0'},'fast');
+        $("#name_VL").animate({
+            height:'200px',opacity:'1'},'fast');
+        $("#name_Vl").animate({
+            height:'200px',opacity:'0'},'fast');
+        $("#name_Vl").animate({
+            height:'200px',opacity:'1'},'fast');
+        this.unbind("flash");
+
+        GD11.trigger("start");
     });
 
     //?????????
@@ -195,6 +209,20 @@ oCanvas.domReady(function () {
     }).bind("mouseleave",function(){
         $("#name_HX").css("display","none");
         canvas.mouse.cursor("default");
+    }).bind("flash",function(){
+        $("#name_HX").animate({
+            height:'200px',opacity:'1'},'fast');
+        $("#name_HX").animate({
+            height:'200px',opacity:'0'},'fast');
+        $("#name_HX").animate({
+            height:'200px',opacity:'1'},'fast');
+        $("#name_HX").animate({
+            height:'200px',opacity:'0'},'fast');
+        $("#name_HX").animate({
+            height:'200px',opacity:'1'},'fast');
+        this.unbind("flash");
+
+        GD10.trigger("start");
     });
     //?????
     var img6=canvas.display.image({
@@ -214,6 +242,18 @@ oCanvas.domReady(function () {
         x:283,
         y:305,
         image:"image/main/21.png"
+    }).bind("flash",function(){
+        $("#name_QSC1").animate({
+            height:'200px',opacity:'1'},'fast');
+        $("#name_QSC1").animate({
+            height:'200px',opacity:'0'},'fast');
+        $("#name_QSC1").animate({
+            height:'200px',opacity:'1'},'fast');
+        $("#name_QSC1").animate({
+            height:'200px',opacity:'0'},'fast');
+        $("#name_QSC1").animate({
+            height:'200px',opacity:'1'},'fast');
+        this.unbind("flash");
     });
     canvas.addChild(img61);
     img61.bind("mouseenter",function(){
@@ -222,6 +262,18 @@ oCanvas.domReady(function () {
     }).bind("mouseleave",function(){
         $("#name_QSC2").css("display","none");
         canvas.mouse.cursor("default");
+    }).bind("flash",function(){
+        $("#name_QSC2").animate({
+            height:'200px',opacity:'1'},'fast');
+        $("#name_QSC2").animate({
+            height:'200px',opacity:'0'},'fast');
+        $("#name_QSC2").animate({
+            height:'200px',opacity:'1'},'fast');
+        $("#name_QSC2").animate({
+            height:'200px',opacity:'0'},'fast');
+        $("#name_QSC2").animate({
+            height:'200px',opacity:'1'},'fast');
+        this.unbind("flash");
     });
     var img62=canvas.display.image({
         x:475,
@@ -235,6 +287,18 @@ oCanvas.domReady(function () {
     }).bind("mouseleave",function(){
         $("#name_QSC3").css("display","none");
         canvas.mouse.cursor("default");
+    }).bind("flash",function(){
+        $("#name_QSC3").animate({
+            height:'200px',opacity:'1'},'fast');
+        $("#name_QSC3").animate({
+            height:'200px',opacity:'0'},'fast');
+        $("#name_QSC3").animate({
+            height:'200px',opacity:'1'},'fast');
+        $("#name_QSC3").animate({
+            height:'200px',opacity:'0'},'fast');
+        $("#name_QSC3").animate({
+            height:'200px',opacity:'1'},'fast');
+        this.unbind("flash");
     });
     var img63=canvas.display.image({
         x:479,
@@ -248,6 +312,18 @@ oCanvas.domReady(function () {
     }).bind("mouseleave",function(){
         $("#name_QSC4").css("display","none");
         canvas.mouse.cursor("default");
+    }).bind("flash",function(){
+        $("#name_QSC4").animate({
+            height:'200px',opacity:'1'},'fast');
+        $("#name_QSC4").animate({
+            height:'200px',opacity:'0'},'fast');
+        $("#name_QSC4").animate({
+            height:'200px',opacity:'1'},'fast');
+        $("#name_QSC4").animate({
+            height:'200px',opacity:'0'},'fast');
+        $("#name_QSC4").animate({
+            height:'200px',opacity:'1'},'fast');
+        this.unbind("flash");
     });
 
     var img7=canvas.display.image({
@@ -276,6 +352,21 @@ oCanvas.domReady(function () {
     }).bind("mouseleave",function(){
         $("#name_TC").css("display","none");
         canvas.mouse.cursor("default");
+    }).bind("flash",function(){
+        $("#name_TC").animate({
+            height:'200px',opacity:'1'},'fast');
+        $("#name_TC").animate({
+            height:'200px',opacity:'0'},'fast');
+        $("#name_TC").animate({
+            height:'200px',opacity:'1'},'fast');
+        $("#name_TC").animate({
+            height:'200px',opacity:'0'},'fast');
+        $("#name_TC").animate({
+            height:'200px',opacity:'1'},'fast');
+        this.unbind("flash");
+
+        GD14.trigger("start");
+        GD15.trigger("start");
     });
 
     var img9=canvas.display.image({
@@ -290,6 +381,21 @@ oCanvas.domReady(function () {
     }).bind("mouseleave",function(){
         $("#name_CY").css("display","none");
         canvas.mouse.cursor("default");
+    }).bind("flash",function(){
+        $("#name_CY").animate({
+            height:'200px',opacity:'1'},'fast');
+        $("#name_CY").animate({
+            height:'200px',opacity:'0'},'fast');
+        $("#name_CY").animate({
+            height:'200px',opacity:'1'},'fast');
+        $("#name_CY").animate({
+            height:'200px',opacity:'0'},'fast');
+        $("#name_CY").animate({
+            height:'200px',opacity:'1'},'fast');
+        this.unbind("flash");
+
+        GD12.trigger("start");
+        GD13.trigger("start");
     });
 
     //???
@@ -550,15 +656,15 @@ oCanvas.domReady(function () {
         beginHeight: 0,       //????¦É??????????§¹????¦Å????
         endHeight: 0,     //????¦É???????????§¹????¦Å?????
         legacyHeight: 0,
-        paused: 1,
+        paused: 0,
         full:0
     });
-    GD07.bind("start",function(){
-        GD02.paused=1;
-        canvas.redraw();
-    });
     canvas.addChild(GD07);
-
+    GD07.bind("start",function(){
+        canvas.timeline.stop();
+        window.setTimeout(restart,1000);
+        this.paused=1;
+    });
     var GD08 = canvas.display.GD1({
         destination: {
             x_d: 0, y_d: 0
@@ -586,12 +692,13 @@ oCanvas.domReady(function () {
         beginHeight: 0,       //????¦É??????????§¹????¦Å????
         endHeight: 0,     //????¦É???????????§¹????¦Å?????
         legacyHeight: 0,
-        paused: 1,
+        paused: 0,
         full:0
     });
     GD08.bind("start",function(){
-        GD02.paused=1;
-        canvas.redraw();
+        canvas.timeline.stop();
+        window.setTimeout(restart,1000);
+        this.paused=1;
     });
     canvas.addChild(GD08);
 
@@ -620,12 +727,13 @@ oCanvas.domReady(function () {
         beginHeight: 0,       //????¦É??????????§¹????¦Å????
         endHeight: 0,     //????¦É???????????§¹????¦Å?????
         legacyHeight: 0,
-        paused: 1,
+        paused: 0,
         full:0
     });
     GD09.bind("start",function(){
-        GD02.paused=1;
-        canvas.redraw();
+        canvas.timeline.stop();
+        window.setTimeout(restart,1000);
+        this.paused=1;
     });
     canvas.addChild(GD09);
 
@@ -655,12 +763,13 @@ oCanvas.domReady(function () {
         beginHeight: 0,       //????¦É??????????§¹????¦Å????
         endHeight: 0,     //????¦É???????????§¹????¦Å?????
         legacyHeight: 0,
-        paused: 1,
+        paused: 0,
         full:0
     });
     GD10.bind("start",function(){
-        GD02.paused=1;
-        canvas.redraw();
+        canvas.timeline.stop();
+        window.setTimeout(restart,1000);
+        this.paused=1;
     });
     canvas.addChild(GD10);
 
@@ -688,12 +797,13 @@ oCanvas.domReady(function () {
         beginHeight: 0,       //????¦É??????????§¹????¦Å????
         endHeight: 0,     //????¦É???????????§¹????¦Å?????
         legacyHeight: 0,
-        paused: 1,
+        paused: 0,
         full:0
     });
     GD11.bind("start",function(){
-        GD02.paused=1;
-        canvas.redraw();
+        canvas.timeline.stop();
+        window.setTimeout(restart,1000);
+        this.paused=1;
     });
     canvas.addChild(GD11);
 
@@ -721,12 +831,13 @@ oCanvas.domReady(function () {
         beginHeight: 0,       //????¦É??????????§¹????¦Å????
         endHeight: 0,     //????¦É???????????§¹????¦Å?????
         legacyHeight: 0,
-        paused: 1,
+        paused: 0,
         full:0
     });
     GD12.bind("start",function(){
-        GD02.paused=1;
-        canvas.redraw();
+        canvas.timeline.stop();
+        window.setTimeout(restart,1000);
+        this.paused=1;
     });
     canvas.addChild(GD12);
 
@@ -756,12 +867,13 @@ oCanvas.domReady(function () {
         beginHeight: 0,       //????¦É??????????§¹????¦Å????
         endHeight: 0,     //????¦É???????????§¹????¦Å?????
         legacyHeight: 0,
-        paused: 1,
+        paused: 0,
         full:0
     });
     GD13.bind("start",function(){
-        GD02.paused=1;
-        canvas.redraw();
+        canvas.timeline.stop();
+        window.setTimeout(restart,1000);
+        this.paused=1;
     });
     canvas.addChild(GD13);
 
@@ -791,12 +903,13 @@ oCanvas.domReady(function () {
         beginHeight: 0,       //????¦É??????????§¹????¦Å????
         endHeight: 0,     //????¦É???????????§¹????¦Å?????
         legacyHeight: 0,
-        paused: 1,
+        paused: 0,
         full:0
     });
     GD14.bind("start",function(){
-        GD02.paused=1;
-        canvas.redraw();
+        canvas.timeline.stop();
+        window.setTimeout(restart,1000);
+        this.paused=1;
     });
     canvas.addChild(GD14);
 
@@ -826,12 +939,13 @@ oCanvas.domReady(function () {
         beginHeight: 0,       //????¦É??????????§¹????¦Å????
         endHeight: 0,     //????¦É???????????§¹????¦Å?????
         legacyHeight: 0,
-        paused: 1,
+        paused: 0,
         full:0
     });
     GD15.bind("start",function(){
-        GD02.paused=1;
-        canvas.redraw();
+        canvas.timeline.stop();
+        window.setTimeout(restart,1000);
+        this.paused=1;
     });
     canvas.addChild(GD15);
     canvas.setLoop(function () {
@@ -865,6 +979,26 @@ oCanvas.domReady(function () {
             img2.trigger("flash");
             img21.trigger("flash");
             img22.trigger("flash");
+        }
+        if(GD08.full==1)
+        {
+            img5.trigger("flash");
+            img3.trigger("flash");
+        }
+        //if(GD09.full==1){
+        //    img3.trigger("flash");
+        //}
+        if(GD10.full==1){
+            img9.trigger("flash");
+        }
+        if(GD13.full==1){
+            img8.trigger("flash");
+        }
+        if(GD15.full==1){
+            img6.trigger("flash");
+            img61.trigger("flash");
+            img62.trigger("flash");
+            img63.trigger("flash");
         }
         canvas.redraw();
     }).start();
